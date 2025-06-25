@@ -35,9 +35,9 @@ public abstract class AppDatabase extends RoomDatabase {
             Executors.newFixedThreadPool(NUMBER_OF_THREADS);
 
     // Khai báo DAO
-//    public abstract ProductDAO productDAO();
+    public abstract ProductDAO productDAO();
 //    public abstract SupplierDAO supplierDAO();
-//    public abstract CategoryDAO categoryDAO();
+    public abstract CategoryDAO categoryDAO();
 //    public abstract FeedbackDAO feedbackDAO();
 //    public abstract OrderDAO orderDAO();
 //    public abstract OrderDetailsDAO orderDetailsDAO();
