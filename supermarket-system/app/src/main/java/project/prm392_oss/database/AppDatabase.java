@@ -13,8 +13,19 @@ import java.util.concurrent.Executors;
 import project.prm392_oss.dao.*;
 import project.prm392_oss.entity.*;
 
-@Database(entities = {Category.class, Feedback.class, Order.class, OrderDetails.class,
-        Product.class, Role.class, Supplier.class, User.class, Cart.class, CartItem.class},
+@Database(entities =
+        {
+                Category.class,
+//        Feedback.class,
+//        Order.class,
+//        OrderDetails.class,
+        Product.class,
+//        Role.class,
+        Supplier.class,
+//        User.class,
+//        Cart.class,
+//        CartItem.class
+        },
         version = 3, exportSchema = false)
 public abstract class AppDatabase extends RoomDatabase {
 
@@ -24,9 +35,9 @@ public abstract class AppDatabase extends RoomDatabase {
             Executors.newFixedThreadPool(NUMBER_OF_THREADS);
 
     // Khai báo DAO
-//    public abstract ProductDAO productDAO();
+    public abstract ProductDAO productDAO();
 //    public abstract SupplierDAO supplierDAO();
-//    public abstract CategoryDAO categoryDAO();
+    public abstract CategoryDAO categoryDAO();
 //    public abstract FeedbackDAO feedbackDAO();
 //    public abstract OrderDAO orderDAO();
 //    public abstract OrderDetailsDAO orderDetailsDAO();
