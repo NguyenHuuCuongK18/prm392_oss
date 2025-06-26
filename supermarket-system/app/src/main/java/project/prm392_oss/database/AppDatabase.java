@@ -20,9 +20,9 @@ import project.prm392_oss.entity.*;
 //        Order.class,
 //        OrderDetails.class,
         Product.class,
-//        Role.class,
+        Role.class,
         Supplier.class,
-//        User.class,
+        User.class,
 //        Cart.class,
 //        CartItem.class
         },
@@ -41,8 +41,8 @@ public abstract class AppDatabase extends RoomDatabase {
 //    public abstract FeedbackDAO feedbackDAO();
 //    public abstract OrderDAO orderDAO();
 //    public abstract OrderDetailsDAO orderDetailsDAO();
-//    public abstract RoleDAO roleDAO();
-//    public abstract UserDAO userDAO();
+    public abstract RoleDAO roleDAO();
+    public abstract UserDAO userDAO();
 //
 //    public abstract CartDAO cartDAO();
 //    public abstract CartItemDAO cartItemDAO();
