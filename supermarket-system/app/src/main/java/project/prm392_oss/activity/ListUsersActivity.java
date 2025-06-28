@@ -92,10 +92,10 @@ public class ListUsersActivity extends BaseActivity {
             public void onNothingSelected(AdapterView<?> parent) { }
         });
 
-//        createEmployeeButton.setOnClickListener(v -> {
-//            Intent intent = new Intent(ListUsersActivity.this, AddEmployeeActivity.class);
-//            startActivity(intent);
-//        });
+        createEmployeeButton.setOnClickListener(v -> {
+            Intent intent = new Intent(ListUsersActivity.this, AddEmployeeActivity.class);
+            startActivity(intent);
+        });
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

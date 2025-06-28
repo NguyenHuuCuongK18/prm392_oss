@@ -99,14 +99,14 @@ public class UserAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
                 userRoleTextView.setText(roleName);
             });
 
-//            viewButton.setOnClickListener(v -> {
-//                Class<?> dest = (user.getRole_id() == 3)
-//                        ? CustomerDetailActivity.class
-//                        : EmployeeDetailActivity.class;
-//                Intent intent = new Intent(context, dest);
-//                intent.putExtra("userId", user.getUser_id());
-//                context.startActivity(intent);
-//            });
+            viewButton.setOnClickListener(v -> {
+                Class<?> dest = (user.getRole_id() == 3)
+                        ? CustomerDetailActivity.class
+                        : EmployeeDetailActivity.class;
+                Intent intent = new Intent(context, dest);
+                intent.putExtra("userId", user.getUser_id());
+                context.startActivity(intent);
+            });
         }
     }
 }
