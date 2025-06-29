@@ -12,8 +12,8 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import project.prm392_oss.R;
-//import project.prm392_oss.activity.EmployeeDetailActivity;
-//import project.prm392_oss.activity.CustomerDetailActivity;
+import project.prm392_oss.activity.EmployeeDetailActivity;
+import project.prm392_oss.activity.CustomerDetailActivity;
 import project.prm392_oss.activity.ListUsersActivity;
 import project.prm392_oss.entity.User;
 import project.prm392_oss.viewModel.UserViewModel;
@@ -99,14 +99,14 @@ public class UserAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
                 userRoleTextView.setText(roleName);
             });
 
-//            viewButton.setOnClickListener(v -> {
-//                Class<?> dest = (user.getRole_id() == 3)
-//                        ? CustomerDetailActivity.class
-//                        : EmployeeDetailActivity.class;
-//                Intent intent = new Intent(context, dest);
-//                intent.putExtra("userId", user.getUser_id());
-//                context.startActivity(intent);
-//            });
+            viewButton.setOnClickListener(v -> {
+                Class<?> dest = (user.getRole_id() == 3)
+                        ? CustomerDetailActivity.class
+                        : EmployeeDetailActivity.class;
+                Intent intent = new Intent(context, dest);
+                intent.putExtra("userId", user.getUser_id());
+                context.startActivity(intent);
+            });
         }
     }
 }
