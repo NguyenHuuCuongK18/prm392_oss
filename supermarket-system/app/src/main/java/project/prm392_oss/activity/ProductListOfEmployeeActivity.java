@@ -76,43 +76,43 @@ public class ProductListOfEmployeeActivity extends BaseActivity {
 
 
     }
-//    @Override
-//    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-//        super.onActivityResult(requestCode, resultCode, data);
-//
-//        if (requestCode == UPDATE_PRODUCT_REQUEST && resultCode == RESULT_OK) {
-//            if (data != null) {
-//                String categoryId = data.getStringExtra("category_id");
-//                if (categoryId != null && !categoryId.isEmpty()) {
-//                    try {
-//                        int categoryIdInt = Integer.parseInt(categoryId);
-//
-//                        // Sử dụng categoryIdInt để cập nhật dữ liệu trong ProductListOfEmployeeActivity
-//                        categoryViewModel.getCategoryById(categoryIdInt).observe(this, category -> {
-//                            if (category != null) {
-//                                category_of_product_tv.setText(category.getName());
-//                                Log.d("Category", "Category found: " + category.getName());
-//                                productViewModel.getProductsByCategory(category.getCategory_id()).observe(this, new Observer<List<Product>>() {
-//                                    @Override
-//                                    public void onChanged(List<Product> products) {
-//                                        if(products != null) {
-//                                            list.clear();
-//                                            list.addAll(products);
-//                                            adapter.notifyDataSetChanged();
-//                                        } else {
-//                                            Toast.makeText(ProductListOfEmployeeActivity.this, "There have no products of " + category.getName(), Toast.LENGTH_SHORT).show();
-//                                        }
-//                                    }
-//                                });
-//                            } else {
-//                                Log.d("Category", "Category not found");
-//                            }
-//                        });
-//                    } catch (NumberFormatException e) {
-//                        Log.e("ProductListOfEmployeeActivity", "Invalid category ID returned", e);
-//                    }
-//                }
-//            }
-//        }
-//    }
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if (requestCode == UPDATE_PRODUCT_REQUEST && resultCode == RESULT_OK) {
+            if (data != null) {
+                String categoryId = data.getStringExtra("category_id");
+                if (categoryId != null && !categoryId.isEmpty()) {
+                    try {
+                        int categoryIdInt = Integer.parseInt(categoryId);
+
+                        // Sử dụng categoryIdInt để cập nhật dữ liệu trong ProductListOfEmployeeActivity
+                        categoryViewModel.getCategoryById(categoryIdInt).observe(this, category -> {
+                            if (category != null) {
+                                category_of_product_tv.setText(category.getName());
+                                Log.d("Category", "Category found: " + category.getName());
+                                productViewModel.getProductsByCategory(category.getCategory_id()).observe(this, new Observer<List<Product>>() {
+                                    @Override
+                                    public void onChanged(List<Product> products) {
+                                        if(products != null) {
+                                            list.clear();
+                                            list.addAll(products);
+                                            adapter.notifyDataSetChanged();
+                                        } else {
+                                            Toast.makeText(ProductListOfEmployeeActivity.this, "There have no products of " + category.getName(), Toast.LENGTH_SHORT).show();
+                                        }
+                                    }
+                                });
+                            } else {
+                                Log.d("Category", "Category not found");
+                            }
+                        });
+                    } catch (NumberFormatException e) {
+                        Log.e("ProductListOfEmployeeActivity", "Invalid category ID returned", e);
+                    }
+                }
+            }
+        }
+    }
 }
