@@ -12,8 +12,8 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import project.prm392_oss.R;
-//import project.prm392_oss.activity.EmployeeDetailActivity;
-//import project.prm392_oss.activity.CustomerDetailActivity;
+import project.prm392_oss.activity.EmployeeDetailActivity;
+import project.prm392_oss.activity.CustomerDetailActivity;
 import project.prm392_oss.activity.ListUsersActivity;
 import project.prm392_oss.entity.User;
 import project.prm392_oss.viewModel.UserViewModel;

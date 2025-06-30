@@ -36,7 +36,7 @@ public abstract class AppDatabase extends RoomDatabase {
 
     // Khai báo DAO
     public abstract ProductDAO productDAO();
-//    public abstract SupplierDAO supplierDAO();
+    public abstract SupplierDAO supplierDAO();
     public abstract CategoryDAO categoryDAO();
 //    public abstract FeedbackDAO feedbackDAO();
 //    public abstract OrderDAO orderDAO();
