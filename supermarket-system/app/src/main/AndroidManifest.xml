@@ -16,6 +16,18 @@
         android:theme="@style/Theme.PRM392_OSS"
         tools:targetApi="31">
         <activity
+            android:name=".activity.SupplierListActivity"
+            android:exported="false"
+            android:parentActivityName=".activity.ListCategoriesActivity" />
+        <activity
+            android:name=".activity.ListProductActivity"
+            android:exported="false"
+            android:label="Product Managerment" />
+        <activity
+            android:name=".activity.AddProductActivity"
+            android:exported="false"
+            android:parentActivityName=".activity.ListCategoriesActivity" />
+        <activity
             android:name=".activity.ProductListOfEmployeeActivity"
             android:exported="false"
             android:parentActivityName=".activity.ListCategoriesActivity" />
@@ -120,21 +132,9 @@
                 android:value=".activity.ListUsersActivity" />
         </activity>
         <activity
-            android:name=".activity.ListProductActivity"
-            android:exported="true"
-            android:label="Product Managerment" />
-        <activity
             android:name=".activity.UpdateProductActivity"
             android:exported="true"
             android:parentActivityName=".activity.ProductListOfEmployeeActivity" />
-        <activity
-            android:name=".activity.AddProductActivity"
-            android:exported="true"
-            android:parentActivityName=".activity.ListCategoriesActivity" />
-        <activity
-            android:name=".activity.SupplierListActivity"
-            android:exported="true"
-            android:parentActivityName=".activity.ListCategoriesActivity" />
         <activity
             android:name=".activity.UpdateSupplierActivity"
             android:exported="true"

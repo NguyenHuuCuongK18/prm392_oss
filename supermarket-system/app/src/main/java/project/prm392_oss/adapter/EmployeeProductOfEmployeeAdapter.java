@@ -16,7 +16,7 @@ import com.squareup.picasso.Picasso;
 import java.util.List;
 
 import project.prm392_oss.R;
-//import project.prm392_oss.activity.UpdateProductActivity;
+import project.prm392_oss.activity.UpdateProductActivity;
 import project.prm392_oss.entity.Product;
 
 public class EmployeeProductOfEmployeeAdapter extends BaseAdapter {
@@ -79,11 +79,11 @@ public class EmployeeProductOfEmployeeAdapter extends BaseAdapter {
             holder.product_img_of_lv.setImageResource(R.drawable.ic_launcher_background);
         }
 
-//        holder.update_product_btn.setOnClickListener(v -> {
-//            Intent intent = new Intent(context, UpdateProductActivity.class);
-//            intent.putExtra("product_id", String.valueOf(p.getProduct_id()));
-//            context.startActivity(intent);
-//        });
+        holder.update_product_btn.setOnClickListener(v -> {
+            Intent intent = new Intent(context, UpdateProductActivity.class);
+            intent.putExtra("product_id", String.valueOf(p.getProduct_id()));
+            context.startActivity(intent);
+        });
         return convertView;
     }
 
