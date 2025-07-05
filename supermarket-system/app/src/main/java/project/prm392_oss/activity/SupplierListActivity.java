@@ -18,7 +18,7 @@ import java.util.List;
 import project.prm392_oss.R;
 import project.prm392_oss.adapter.EmployeeSupplierListAdapter;
 import project.prm392_oss.entity.Supplier;
-import project.prm392_oss.utils.manager.SessionManager;
+//import project.prm392_oss.utils.manager.SessionManager;
 import project.prm392_oss.viewModel.SupplierViewModel;
 
 public class SupplierListActivity extends BaseActivity {
@@ -62,10 +62,10 @@ public class SupplierListActivity extends BaseActivity {
             }
         });
         //add supplier
-        add_supplier_btn.setOnClickListener(v -> {
-            Intent intent = new Intent(SupplierListActivity.this, AddSupplierActivity.class);
-            startActivity(intent);
-        });
+//        add_supplier_btn.setOnClickListener(v -> {
+//            Intent intent = new Intent(SupplierListActivity.this, AddSupplierActivity.class);
+//            startActivity(intent);
+//        });
 
         search_supplier_sv.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
@@ -81,12 +81,12 @@ public class SupplierListActivity extends BaseActivity {
             }
         });
     }
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        if (item.getItemId() == R.id.logout) {
-            SessionManager.logout(this);
-            return true;
-        }
-        return super.onOptionsItemSelected(item);
-    }
+//    @Override
+//    public boolean onOptionsItemSelected(MenuItem item) {
+//        if (item.getItemId() == R.id.logout) {
+//            SessionManager.logout(this);
+//            return true;
+//        }
+//        return super.onOptionsItemSelected(item);
+//    }
 }

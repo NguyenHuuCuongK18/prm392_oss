@@ -79,11 +79,13 @@ public class EmployeeProductOfEmployeeAdapter extends BaseAdapter {
             holder.product_img_of_lv.setImageResource(R.drawable.ic_launcher_background);
         }
 
+
         holder.update_product_btn.setOnClickListener(v -> {
             Intent intent = new Intent(context, UpdateProductActivity.class);
             intent.putExtra("product_id", String.valueOf(p.getProduct_id()));
             context.startActivity(intent);
         });
+
         return convertView;
     }
 
