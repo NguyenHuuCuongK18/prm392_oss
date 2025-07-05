@@ -15,7 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 import java.util.List;
 import project.prm392_oss.R;
-//import project.prm392_oss.activity.UpdateSupplierActivity;
+import project.prm392_oss.activity.UpdateSupplierActivity;
 import project.prm392_oss.entity.Supplier;
 
 public class EmployeeSupplierListAdapter extends RecyclerView.Adapter<EmployeeSupplierListAdapter.SupplierViewHolder> implements Filterable {
@@ -38,11 +38,11 @@ public class EmployeeSupplierListAdapter extends RecyclerView.Adapter<EmployeeSu
         holder.supplier_name_tv.setText(s.getName());
         holder.supplier_phone_tv.setText("Phone: "+s.getPhone());
         holder.supplier_address_tv.setText("Address: "+s.getAddress());
-//        holder.supplier_update_btn.setOnClickListener(v -> {
-//            Intent intent = new Intent(context, UpdateSupplierActivity.class);
-//            intent.putExtra("supplierId", String.valueOf(s.getSupplier_id()));
-//            context.startActivity(intent);
-//        });
+        holder.supplier_update_btn.setOnClickListener(v -> {
+            Intent intent = new Intent(context, UpdateSupplierActivity.class);
+            intent.putExtra("supplierId", String.valueOf(s.getSupplier_id()));
+            context.startActivity(intent);
+        });
     }
     @Override
     public int getItemCount() {
