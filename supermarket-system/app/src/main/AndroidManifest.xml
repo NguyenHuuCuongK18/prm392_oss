@@ -16,6 +16,10 @@
         android:theme="@style/Theme.PRM392_OSS"
         tools:targetApi="31">
         <activity
+            android:name=".activity.UpdateProductActivity"
+            android:exported="false"
+            android:parentActivityName=".activity.ProductListOfEmployeeActivity" />
+        <activity
             android:name=".activity.ProductListOfEmployeeActivity"
             android:exported="false"
             android:parentActivityName=".activity.ListCategoriesActivity" />
@@ -123,10 +127,6 @@
             android:name=".activity.ListProductActivity"
             android:exported="true"
             android:label="Product Managerment" />
-        <activity
-            android:name=".activity.UpdateProductActivity"
-            android:exported="true"
-            android:parentActivityName=".activity.ProductListOfEmployeeActivity" />
         <activity
             android:name=".activity.UpdateSupplierActivity"
             android:exported="true"
